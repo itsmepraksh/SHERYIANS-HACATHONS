@@ -1,0 +1,41 @@
+@import "tailwindcss";
+
+
+/* @font-face {
+  font-family: "redesign";
+  src: url(../public/redesign.woff2) format("woff2");
+}  */
+
+@font-face {
+  font-family: "redesign";
+  src: url('/fonts/redesign.woff2') format("truetype");
+}
+
+@font-face {
+  font-family: "latoBlack";
+  src: url('/fonts/Lato-Black.ttf') format("truetype");
+}
+
+@font-face {
+  font-family: "latoBold";
+  src: url('/fonts/Lato-Bold.ttf') format("truetype");
+}
+
+@font-face {
+  font-family: "latoRegular";
+  src: url('/fonts/Lato-Regular.ttf') format("truetype");
+}
+
+body{
+  background-color:  #334238;
+  color:#FAF2E8;
+}
+
+.hamburg-link{
+  width: 100%;
+  padding: 1rem 0 ;
+  padding-left: 1.5rem; 
+  border: 0.1px solid rgb(110, 110, 110); 
+  border-left: none;
+  border-right: none;
+}
