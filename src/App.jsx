@@ -1,12 +1,14 @@
  
-import Navbar from './components/Navbar'
-import Home from './pages/Home'
+import Footer from './components/Footer'
+import Navbar from './components/Navbar' 
+import MainRouter from './router/MainRouter'
 
 const App = () => {
   return (
     <div>
       <Navbar/>
-      <Home/>
+      <MainRouter/>
+      <Footer/>
     </div>
   )
 }

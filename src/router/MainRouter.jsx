@@ -1,4 +1,8 @@
 import { Route, Routes } from "react-router-dom"
+import Home from "../pages/Home"
+import About from "../pages/About"
+import Contact from "../pages/Contact"
+import LoginInSIgnUp from "../pages/LoginInSIgnUp"
 
  
 const MainRouter = () => {
@@ -10,7 +14,7 @@ const MainRouter = () => {
         <Route path="/about" element={<About/>}/>
         {/* <Route path="/services" element={<Services/>}/> */}
         {/* <Route path="/certificates"  element={<Certificate/>}/> */}
-        {/* <Route path="/gallery" element={<Gallery/>}/> */}
+        <Route path="/loginsignup" element={<LoginInSIgnUp/>}/>
         <Route path="/contact" element={<Contact/>}/>
 
     </Routes>
