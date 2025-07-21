@@ -7,8 +7,8 @@ import { faFacebookF, faInstagram, faYoutube } from "@fortawesome/free-brands-sv
 
 const About = () => {
   return (
-    <div>
-      <section id="about-company" className="px-4 py-10">
+    <div className="">
+      <section id="about-company" className="px-4 py-10 md:px-16">
         <h1 className="font-[latoBold] text-5xl font-bold uppercase leading-[1.1] tracking-wider">
           about us
         </h1>
@@ -23,7 +23,7 @@ const About = () => {
         <CtaBtn text={"Explore Now"} />
       </section>
 
-      <section id="founder-info" className="px-4 py-10 bg-[#FAF2E8] text-black">
+      <section id="founder-info" className="px-4 py-10 bg-[#FAF2E8] text-black md:px-16">
         <p className="text-red-300 font-[latobold] text-2xl py-4">
           #shanzandnikz
         </p>

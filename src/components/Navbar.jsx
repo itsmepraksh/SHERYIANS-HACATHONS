@@ -11,7 +11,7 @@ const Navbar = () => {
     setIsMenuOpen(!isMenuOpen);
   };
   return (
-    <div className=" p-4  bg-[#334238]   flex justify-between items-center  font-medium font-[latoRegular]  rounded-lg">
+    <div className=" p-4  bg-[#334238]   flex justify-between items-center  font-medium font-[latoRegular]  rounded-lg md:px-8">
       <div id="nav" className="flex justify-between w-full  items-center gap-4">
         <div id="logo" className="flex items-center gap-2 ">
           <img src={logo} className="h-10 rounded-full" alt="" />
@@ -32,14 +32,15 @@ const Navbar = () => {
         id="hamburg-menu"
         className={` ${
           isMenuOpen ? "" : "hidden"
-        } lg:hidden! absolute z-[99] top-20 left-0 h-[85%] flex flex-col items-center bg-[#334238] text-[#FAF2E8] text-xl font-semibold w-full`}
+        } lg:hidden! absolute z-[99] top-20 left-0 h-[85%] flex flex-col items-center bg-[#334238] text-[#FAF2E8] text-xl font-semibold w-full `}
       >
         <Link to={"/home"} className="hamburg-link">Home</Link>
         <Link to={"/about"} className="hamburg-link" >About</Link>
         <Link to={"/women"} className="hamburg-link flex items-center justify-between"><p>Women's Fashion </p><FontAwesomeIcon icon={faAngleDown} className="px-4" /></Link>
         <Link to={"/men"}className="hamburg-link flex items-center justify-between" ><p>Men's Fashion</p><FontAwesomeIcon icon={faAngleDown} className="px-4" /></Link>
         <Link to={"/contact"} className="hamburg-link">Contact</Link>
-        <Link to={"/loginsignup"} className="hamburg-link">LogIn / SignUp</Link>
+        <Link to={"/login"} className="hamburg-link">LogIn </Link>
+        <Link to={"/signup"} className="hamburg-link" >SignUp</Link>
       </div>
     </div>
   );

@@ -3,7 +3,7 @@ import CtaBtn from "../components/CtaBtn";
 const Contact = () => {
   return (
     <div>
-      <section id="contact-page" className="px-4 py-10">
+      <section id="contact-page" className="px-4 py-10  md:px-16">
         <h1 className="font-[latoBold] text-5xl font-bold uppercase leading-[1.1] tracking-wider">
           Contact Us
         </h1>
@@ -22,12 +22,12 @@ const Contact = () => {
           you're at it, don’t miss out, check out our latest arrivals.
         </p>
 
-        <form action="" className="flex flex-col gap-4 py-5">
-          <input type="text" placeholder="First Name*" className="bg-[#618C70] p-4 rounded placeholder:text-white " />
-          <input type="text" placeholder="Last Name*" className="bg-[#618C70] p-4 rounded placeholder:text-white " />
-          <input type="email" placeholder="Email*" className="bg-[#618C70] p-4 rounded placeholder:text-white " />
-          <input type="text" placeholder="Mobile No*" className="bg-[#618C70] p-4 rounded placeholder:text-white "/>
-          <textarea name="" id="" rows="5" placeholder="Message*" className="bg-[#618C70] p-4 rounded resize-none placeholder:text-white mb-5"></textarea>
+        <form action="" className="flex flex-col justify-between md:flex-wrap md:flex-row gap-4 py-5">
+          <input type="text" placeholder="First Name*" className="bg-[#618C70] p-4 rounded placeholder:text-white w-full md:w-[47%] " />
+          <input type="text" placeholder="Last Name*" className="bg-[#618C70] p-4 rounded placeholder:text-white w-full md:w-[47%] " />
+          <input type="email" placeholder="Email*" className="bg-[#618C70] p-4 rounded placeholder:text-white w-full " />
+          <input type="text" placeholder="Mobile No*" className="bg-[#618C70] p-4 rounded placeholder:text-white w-full"/>
+          <textarea name="" id="" rows="5" placeholder="Message*" className="bg-[#618C70] p-4 rounded resize-none placeholder:text-white mb-5 w-full"></textarea>
 
           {/* <button >submit </button> */}
           <CtaBtn onClick={"submit"} text={"Submit"}/>
