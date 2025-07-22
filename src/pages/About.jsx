@@ -9,7 +9,7 @@ const About = () => {
   return (
     <div className="">
       <section id="about-company" className="px-4 py-10 md:px-16">
-        <h1 className="font-[latoBold] text-5xl font-bold uppercase leading-[1.1] tracking-wider">
+        <h1 className="font-[latoBold] text-5xl lg:text-7xl font-bold uppercase leading-[1.1] tracking-wider">
           about us
         </h1>
 
@@ -34,8 +34,8 @@ const About = () => {
         <h2 className="pt-4 font-medium text-lg">Where Vision Meets Craft</h2>
         <p className="text-sm">Our founders the dreamers behind the design.</p>
 
-        <div id="founder-images" className="py-10 flex flex-col gap-10">
-          <div id="founder-1" className="">
+        <div id="founder-images" className="py-10 flex flex-col md:flex-row gap-10">
+          <div id="founder-1" className="md:w-2/3">
             <img
               src={founder1}
               alt="shanice-shrestha-founder"

@@ -13,7 +13,7 @@ const MainRouter = () => {
         <Route path="/" element={<Home/>} />
         <Route path="/home" element={<Home/>} />
         <Route path="/about" element={<About/>}/>
-        {/* <Route path="/services" element={<Services/>}/> */}
+        {/* <Route path="/fusion-wear" element={</>}/> */}
         <Route path="/signup"  element={<Signup/>}/>
         <Route path="/login" element={<Login/>}/>
         <Route path="/contact" element={<Contact/>}/>

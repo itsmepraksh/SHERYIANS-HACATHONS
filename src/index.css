@@ -42,32 +42,12 @@ body{
 
 @media (min-width:768px) {
   .hamburg-link{
-    padding:1rem 4rem ;
+    padding:1rem 3rem ;
   }
 }
 
-/* #section-1{ 
-  grid-template-areas: 
-  "a d"
-  "b d"
-  "c d"
-  ;
+.dropDownStyle{
+  
 }
-
-#section-1> #heading{
-  grid-area: a;
-}
-
-#section-1 #coupons{
-  grid-area: b;
-}
-
-#section-1 #image-names{
-  grid-area: c;
-}
-
-#section-1 #image-container{
-  grid-area: d;
-} */
 
  

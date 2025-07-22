@@ -16,7 +16,7 @@ const Home = () => {
       >
         <h2
           id="heading"
-          className="font-[latoBold] text-5xl font-bold uppercase leading-[1.1] tracking-wider md:[grid-area:a]"
+          className="font-[latoBold] text-5xl lg:text-7xl font-bold uppercase leading-[1.1] tracking-wider md:[grid-area:a]"
         >
           Heritage <br /> Reimagined
         </h2>
@@ -38,33 +38,32 @@ const Home = () => {
 
         <div
           id="image-container"
-          className=" md:[grid-area:d]   md:bg-red-500 "
+          className=" md:[grid-area:d] md:relative  "
         > 
-            <div id="images-box" className="flex relative h-[28rem]  py-4 md:py-0">
+            <div id="images-box" className="flex relative h-[28rem] md:h-[24rem] lg:h-[30rem]    py-4 md:py-0">
               <img
                 src={item1}
-                className="h-96 w-[65%] md:w-[60%] absolute object-cover object-center rounded-lg"
+                className="h-96 lg:h-full w-[65%] md:w-[55%] lg:w-[60%] absolute md:right-0 object-cover object-center rounded-lg"
                 alt=""
               />
               <img
                 src={item2}
-                className="h-96 w-[65%] md:w-[60%] absolute left-10 object-cover object-center rounded-lg"
+                className="h-96 lg:h-full w-[65%] md:w-[55%] lg:w-[60%] absolute md:right-0 left-10 object-cover object-center rounded-lg"
                 alt=""
               />
               <img
                 src={item3}
-                className="h-96 w-[65%] md:w-[60%] absolute left-20 object-cover object-center rounded-lg"
+                className="h-96 lg:h-full w-[65%] md:w-[55%] lg:w-[60%] absolute md:right-0 left-20 object-cover object-center rounded-lg"
                 alt=""
               />
               <img
                 src={item4}
-                className="h-96 w-[65%] md:w-[60%] absolute left-30 object-cover object-center rounded-lg"
+                className="h-96 lg:h-full w-[65%] md:w-[55%] lg:w-[60%] absolute md:right-0 left-30 object-cover object-center rounded-lg"
                 alt=""
               />
             </div>
-            <div
-              id="arrow-elem"
-              className="flex flex-col items-start font-black text-xl px-2 text-[#CCE561]"
+            <div id="arrow-elem"
+              className="flex flex-col items-start font-black text-xl md:text-xs px-2 text-[#CCE561] md:absolute md:bottom-0 md:left-0"
             >
               <FontAwesomeIcon icon={faAngleDown} className="" />
               <FontAwesomeIcon icon={faAngleDown} className="" />
@@ -78,21 +77,22 @@ const Home = () => {
         id="section-2"
         className="bg-[#FAF2E8] text-black px-4 py-8 pt-22 md:px-8"
       >
-        <div className="font-[latoRegular] flex flex-col items-center">
-          <p className="uppercase text-xs font-bold pb-5">New Arrivals</p>
-          <h1 className="text-3xl font-bold py-5">Elevating Fashion For</h1>
+        <p className="uppercase text-xs font-bold pb-2 text-center">New Arrivals</p>
+        <div className="font-[latoRegular] flex flex-col md:flex-row items-center md:justify-center md:gap-5">
+          
+          <h1 className="text-3xl md:text-4xl font-bold py-5">Elevating Fashion For</h1>
 
           <div
             id="roller-box"
-            className=" w-[75%] bg-[#CCE561] h-12 rounded text-center overflow-hidden font-bold "
+            className=" w-[75%] md:w-[25%] bg-[#CCE561] h-12 md:h-10 rounded text-center overflow-hidden font-bold "
           >
-            <h1 className="py-3">Men's Collection</h1>
-            <h1 className="py-3">Women's Collection</h1>
-            <h1 className="py-3">Popular Categories</h1>
-            <h1 className="py-3">Monthly Bestseller</h1>
+            <h1 className="py-3 md:py-2">Men's Collection</h1>
+            <h1 className="py-3 md:py-2">Women's Collection</h1>
+            <h1 className="py-3 md:py-2">Popular Categories</h1>
+            <h1 className="py-3 md:py-2">Monthly Bestseller</h1>
           </div>
         </div>
-        <div id="arrivals" className="py-12 rounded flex flex-col gap-10 ">
+        <div id="arrivals" className="py-12 rounded flex flex-col md:flex-row gap-10 md:gap-5 ">
           {/* <div id="item" className="w-full">
             <img src="" alt="" />
             <h1 className="font-medium text-xl">Festive wear</h1>
@@ -126,8 +126,9 @@ const Home = () => {
             imgInfo2={"T-shirt"}
           />
 
-          <CtaBtn text={"View all"} />
+          
         </div>
+        <CtaBtn text={"View all"} />
       </section>
     </div>
   );
