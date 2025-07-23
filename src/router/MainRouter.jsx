@@ -4,6 +4,8 @@ import About from "../pages/About"
 import Contact from "../pages/Contact"
 import Login from "../pages/Login"
 import Signup from "../pages/Signup"
+import WesternWear from "../layouts/WesternWear"
+import FusionWear from "../layouts/FusionWear"
 
  
 const MainRouter = () => {
@@ -13,7 +15,8 @@ const MainRouter = () => {
         <Route path="/" element={<Home/>} />
         <Route path="/home" element={<Home/>} />
         <Route path="/about" element={<About/>}/>
-        {/* <Route path="/fusion-wear" element={</>}/> */}
+        <Route path="/fusion-wear" element={<FusionWear/>} />
+        <Route path="/western-wear" element={<WesternWear/>}  />
         <Route path="/signup"  element={<Signup/>}/>
         <Route path="/login" element={<Login/>}/>
         <Route path="/contact" element={<Contact/>}/>

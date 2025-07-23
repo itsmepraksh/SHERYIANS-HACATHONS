@@ -10,12 +10,12 @@ const Navbar = () => {
 
   const dropDown = () => {
     
-      console.log("its open");
+      // console.log("its open");
       setToggleBtn(!toggleBtn);
     
   };
 
-  console.log(toggleBtn);
+  // console.log(toggleBtn);
 
   const toggleHamburgMenu = () => {
     setIsMenuOpen(!isMenuOpen);
