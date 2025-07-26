@@ -9,17 +9,15 @@ const Navbar = () => {
   const [toggleBtn, setToggleBtn] = useState(false);
 
   const dropDown = () => {
-    
-      // console.log("its open");
-      setToggleBtn(!toggleBtn);
-    
+    // console.log("its open");
+    setToggleBtn(!toggleBtn);
   };
 
   // console.log(toggleBtn);
 
   const toggleHamburgMenu = () => {
     setIsMenuOpen(!isMenuOpen);
-    setToggleBtn(false)
+    setToggleBtn(false);
   };
   return (
     <div className=" p-4  bg-[#334238]   flex justify-between items-center  font-medium font-[latoRegular]  rounded-lg ">
@@ -34,10 +32,20 @@ const Navbar = () => {
           </h1>
         </div>
 
+        <div id="nav-for-big-screen" className="hidden lg:flex text-sm gap-5">
+          <Link to={"/home"}>Home</Link>
+          <Link to={"/about"}>About</Link>
+          <Link to={"/men"}>Women's Fashion</Link>
+          <Link to={"/men"}>Men's Fashion</Link>
+          <Link to={"/contact"}>Contact</Link>
+          <Link to={"/login"}>LogIn</Link>
+          <Link to={"/signup"}>SignUp</Link>
+        </div>
+
         <div
           onClick={toggleHamburgMenu}
           id="menu"
-          className="bg-[#E9C8C4] text-[#334238] text-xl p-2 px-3 rounded"
+          className="bg-[#E9C8C4] text-[#334238] text-xl p-2 px-3 rounded lg:hidden"
         >
           <FontAwesomeIcon icon={faBars} />
         </div>
@@ -58,23 +66,31 @@ const Navbar = () => {
         <div
           // to={"/women"}
           onClick={dropDown}
-          className={`hamburg-link h-16 flex items-center justify-between relative ${toggleBtn ? "h-40":""}`}
+          className={`hamburg-link h-16 flex items-center justify-between relative ${
+            toggleBtn ? "h-40" : ""
+          }`}
         >
           <p className="absolute top-4 ">Women's Fashion </p>
-          <FontAwesomeIcon icon={faAngleDown} className={`pr-4 md:pr-1 absolute top-5 right-0 ${toggleBtn ? "rotate-[180deg] mr-4":"rotate-[0deg]"} `} />
-          
-          <div className={` ${toggleBtn ? "absolute  top-15 left-10 h-15 w-[80%] text-lg font-light flex flex-col gap-1":"hidden"}`}>
-            
+          <FontAwesomeIcon
+            icon={faAngleDown}
+            className={`pr-4 md:pr-1 absolute top-5 right-0 md:right-12 ${
+              toggleBtn ? "rotate-[180deg] mr-4 md:mr-1" : "rotate-[0deg]"
+            } `}
+          />
+
+          <div
+            className={` ${
+              toggleBtn
+                ? "absolute  top-15 md:top-13 left-10 md:left-15 h-15 w-[80%] text-lg font-light flex flex-col gap-1"
+                : "hidden"
+            }`}
+          >
             <Link to={"/fusion-wear"}>Fusion Wear</Link>
             <Link to={"/western-wear"}>Western Wear</Link>
           </div>
         </div>
-        
-        {/* <div
-          // to={"/women"}
-          onClick={dropDown}
-          className={`hamburg-link h-16 flex items-center justify-between relative ${toggleBtn ? "h-40":""}`}
-        >
+
+        {/* <div to={"/women"} onClick={dropDown} className={`hamburg-link h-16 flex items-center justify-between relative ${toggleBtn ? "h-40":""}`}>
           <p className="absolute top-4 ">Men's Fashion </p>
           <FontAwesomeIcon icon={faAngleDown} className={`pr-4 md:pr-1 absolute top-5 right-0 ${toggleBtn ? "rotate-[180deg] mr-4":"rotate-[0deg]"} `} />
           

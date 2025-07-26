@@ -3,7 +3,11 @@ import CtaBtn from "../components/CtaBtn";
 import founder1 from "../assets/images/founder1.jpg";
 import founder2 from "../assets/images/founder2.jpg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faFacebookF, faInstagram, faYoutube } from "@fortawesome/free-brands-svg-icons";
+import {
+  faFacebookF,
+  faInstagram,
+  faYoutube,
+} from "@fortawesome/free-brands-svg-icons";
 
 const About = () => {
   return (
@@ -13,7 +17,7 @@ const About = () => {
           about us
         </h1>
 
-        <p className="py-10 text-xl">
+        <p className="py-10 text-xl xl:w-1/2">
           We’re not just making clothes. We’re creating moments, rooted in
           tradition, touched by modernity. Every piece blends ethnic heritage
           with a fresh, effortless twist, designed to feel as beautiful as it
@@ -23,7 +27,10 @@ const About = () => {
         <CtaBtn text={"Explore Now"} />
       </section>
 
-      <section id="founder-info" className="px-4 py-10 bg-[#FAF2E8] text-black md:px-16">
+      <section
+        id="founder-info"
+        className="px-4 py-10 bg-[#FAF2E8] text-black md:px-16"
+      >
         <p className="text-red-300 font-[latobold] text-2xl py-4">
           #shanzandnikz
         </p>
@@ -34,22 +41,31 @@ const About = () => {
         <h2 className="pt-4 font-medium text-lg">Where Vision Meets Craft</h2>
         <p className="text-sm">Our founders the dreamers behind the design.</p>
 
-        <div id="founder-images" className="py-10 flex flex-col md:flex-row gap-10">
-          <div id="founder-1" className="md:w-2/3">
+        <div
+          id="founder-images"
+          className="py-10 flex flex-col md:flex-row gap-10"
+        >
+          <div id="founder-1" className="md:w-2/3  ">
             <img
               src={founder1}
               alt="shanice-shrestha-founder"
               className="rounded"
             />
-             <div className="py-4 flex justify-between items-start">
+            <div className="py-4 flex justify-between items-start xl:w-[78%]">
               <div id="founder-data">
                 <h1 className="font-medium text-lg">Shanice Shrestha</h1>
                 <p className="text-zinc-700">Founder</p>
               </div>
               <div id="social-icons" className="text-red-300 flex gap-2 py-2">
+                <a href="https://www.instagram.com/shaniceshrestha/">
                   <FontAwesomeIcon icon={faInstagram} />
+                </a>
+                <a href="https://www.youtube.com/@shaniceshresthavlog">
                   <FontAwesomeIcon icon={faYoutube} />
+                </a>
+                <a href="https://www.facebook.com/people/Shanice-Shrestha/100044636070227/">
                   <FontAwesomeIcon icon={faFacebookF} />
+                </a>
               </div>
             </div>
           </div>
@@ -64,10 +80,16 @@ const About = () => {
                 <h1 className="font-medium text-lg">Nikita Shrestha</h1>
                 <p className="text-zinc-700">Founder</p>
               </div>
-              <div id="social-icons" className="text-red-300 flex gap-2 py-2">
+               <div id="social-icons" className="text-red-300 flex gap-2 py-2">
+                <a href="https://www.instagram.com/shaniceshrestha/">
                   <FontAwesomeIcon icon={faInstagram} />
+                </a>
+                <a href="https://www.youtube.com/@shaniceshresthavlog">
                   <FontAwesomeIcon icon={faYoutube} />
+                </a>
+                <a href="https://www.facebook.com/people/Shanice-Shrestha/100044636070227/">
                   <FontAwesomeIcon icon={faFacebookF} />
+                </a>
               </div>
             </div>
           </div>

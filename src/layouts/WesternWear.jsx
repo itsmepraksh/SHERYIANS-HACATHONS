@@ -25,7 +25,7 @@ const WesternWear = () => {
   };
 
   return (
-    <div className="bg-[#FAF2E8]">
+    <div className="bg-[#FAF2E8]  md:px-8">
       {/*334238*/}
       <section id="section-1" className=" px-4 py-8   text-black">
         <h2
@@ -78,7 +78,7 @@ const WesternWear = () => {
         </div>
       </section>
 
-      <section id="products-container" className="px-4">
+      <section id="products-container" className="px-4 md:flex md:gap-7">
         <WesterProduct
           id={nanoid()}
           imgSrc={imgSrc2}

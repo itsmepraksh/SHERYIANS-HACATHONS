@@ -1,4 +1,5 @@
 import logo from "../assets/svgs/favicon.svg";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -30,10 +31,12 @@ const Footer = () => {
               quick links
             </h1>
             <ul>
-              <li>Home</li>
-              <li>About</li>
-              <li>Track Order</li>
-              <li>Support Center</li>
+              
+              
+              <li><Link to={"/home"}>Home</Link></li>
+              <li><Link to={"/about"}>About</Link> </li>
+              <li><Link to={"/lost"}>Track Order</Link></li>
+              <li><Link to={"/lost"}>Support Center</Link></li>
             </ul>
           </div>
           <div id="social-links" className="w-1/2 pt-10">
@@ -41,10 +44,10 @@ const Footer = () => {
               let's social
             </h1>
             <ul>
-              <li>Facebook</li>
-              <li>Instagram</li>
-              <li>Twitter</li>
-              <li>Pinterest</li>
+              <li><a href="https://www.facebook.com/people/Shanice-Shrestha/100044636070227/">Facebook</a></li>
+              <li><a href="https://www.instagram.com/shanznnikz/">Instagram</a> </li> 
+              <li><a href="https://www.youtube.com/@shaniceshresthavlog">Youtube</a></li>
+              <li className="opacity-0"> ..</li>
             </ul>
           </div>
           <div id="get-in-touch" className="w-1/2 pt-10">
