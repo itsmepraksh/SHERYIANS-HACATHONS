@@ -6,18 +6,26 @@ import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [toggleBtn, setToggleBtn] = useState(false);
+  const [menToggleBtn, setMenToggleBtn] = useState(false);
+  const [womenToggleBtn, setWomenToggleBtn] = useState(false)
 
-  const dropDown = () => {
-    // console.log("its open");
-    setToggleBtn(!toggleBtn);
+  const dropDownWomen = () => {
+    // console.log("its open for women");
+    setWomenToggleBtn(!womenToggleBtn);
+  };
+
+  
+  const dropDownMen = () => {
+    // console.log("its open for men");
+    setMenToggleBtn(!menToggleBtn);
   };
 
   // console.log(toggleBtn);
 
   const toggleHamburgMenu = () => {
     setIsMenuOpen(!isMenuOpen);
-    setToggleBtn(false);
+    setMenToggleBtn(false);
+    setWomenToggleBtn(false);
   };
   return (
     <div className=" p-4  bg-[#334238]   flex justify-between items-center  font-medium font-[latoRegular]  rounded-lg ">
@@ -55,7 +63,7 @@ const Navbar = () => {
         id="hamburg-menu"
         className={` ${
           isMenuOpen ? "" : "hidden"
-        } lg:hidden! absolute z-[99] top-20 left-0 h-[85%] flex flex-col items-center bg-[#334238] text-[#FAF2E8] text-xl font-semibold w-full   `}
+        } lg:hidden! absolute z-[99] top-18 left-0 h-[85%] flex flex-col items-center bg-[#334238] text-[#FAF2E8] text-xl font-semibold w-full   `}
       >
         <Link to={"/home"} className="hamburg-link">
           Home
@@ -65,28 +73,55 @@ const Navbar = () => {
         </Link>
         <div
           // to={"/women"}
-          onClick={dropDown}
+          onClick={dropDownWomen}
           className={`hamburg-link h-16 flex items-center justify-between relative ${
-            toggleBtn ? "h-40" : ""
+            womenToggleBtn ? "h-40" : ""
           }`}
         >
           <p className="absolute top-4 ">Women's Fashion </p>
           <FontAwesomeIcon
             icon={faAngleDown}
             className={`pr-4 md:pr-1 absolute top-5 right-0 md:right-12 ${
-              toggleBtn ? "rotate-[180deg] mr-4 md:mr-1" : "rotate-[0deg]"
+              womenToggleBtn ? "rotate-[180deg] mr-4 md:mr-1" : "rotate-[0deg]"
             } `}
           />
 
           <div
             className={` ${
-              toggleBtn
-                ? "absolute  top-15 md:top-13 left-10 md:left-15 h-15 w-[80%] text-lg font-light flex flex-col gap-1"
+              womenToggleBtn 
+                ? "absolute top-15 md:top-13 left-10 md:left-15 h-15 w-[80%] text-lg font-light flex flex-col gap-1"
                 : "hidden"
             }`}
           >
             <Link to={"/fusion-wear"}>Fusion Wear</Link>
             <Link to={"/western-wear"}>Western Wear</Link>
+          </div>
+        </div>
+        {/* --------------------------------------------------- */}
+        <div
+          // to={"/men"}
+          onClick={dropDownMen}
+          className={`hamburg-link h-16 flex items-center justify-between relative ${
+            menToggleBtn ? "h-40" : ""
+          }`}
+        >
+          <p className="absolute top-4 ">Men's Fashion </p>
+          <FontAwesomeIcon
+            icon={faAngleDown}
+            className={`pr-4 md:pr-1 absolute top-5 right-0 md:right-12 ${
+              menToggleBtn ? "rotate-[180deg] mr-4 md:mr-1" : "rotate-[0deg]"
+            } `}
+          />
+
+          <div
+            className={` ${
+              menToggleBtn
+                ? "absolute top-15 md:top-13 left-10 md:left-15 h-15 w-[80%] text-lg font-light flex flex-col gap-1"
+                : "hidden"
+            }`}
+          >
+            <Link to={"/lost"}>Festive Wear</Link>
+            <Link to={"/lost"}>Men's Wear</Link>
           </div>
         </div>
 
@@ -101,13 +136,13 @@ const Navbar = () => {
           </div>
         </div> */}
 
-        <Link
+        {/* <Link
           to={"/men"}
           className="hamburg-link flex items-center justify-between"
         >
           <p>Men's Fashion</p>
           <FontAwesomeIcon icon={faAngleDown} className="pr-4 md:pr-1 " />
-        </Link>
+        </Link> */}
         <Link to={"/contact"} className="hamburg-link">
           Contact
         </Link>
