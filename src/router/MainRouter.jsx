@@ -7,6 +7,7 @@ import Signup from "../pages/Signup"
 import WesternWear from "../layouts/WesternWear"
 import FusionWear from "../layouts/FusionWear"
 import PageNotFound from "../pages/PageNotFound"
+import FestiveWear from "../layouts/FestiveWear"
 
  
 const MainRouter = () => {
@@ -18,6 +19,7 @@ const MainRouter = () => {
         <Route path="/about" element={<About/>}/>
         <Route path="/fusion-wear" element={<FusionWear/>} />
         <Route path="/western-wear" element={<WesternWear/>}  />
+        <Route path="/festive-wear" element={<FestiveWear/>}  />
         <Route path="/men" element={<PageNotFound/>}/>
         <Route path="/signup"  element={<Signup/>}/>
         <Route path="/login" element={<Login/>}/>

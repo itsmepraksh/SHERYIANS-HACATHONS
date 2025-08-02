@@ -120,7 +120,7 @@ const Navbar = () => {
                 : "hidden"
             }`}
           >
-            <Link to={"/lost"}>Festive Wear</Link>
+            <Link to={"/festive-wear"}>Festive Wear</Link>
             <Link to={"/lost"}>Men's Wear</Link>
           </div>
         </div>
