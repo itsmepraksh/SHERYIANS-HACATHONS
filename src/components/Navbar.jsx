@@ -7,14 +7,13 @@ import { Link } from "react-router-dom";
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [menToggleBtn, setMenToggleBtn] = useState(false);
-  const [womenToggleBtn, setWomenToggleBtn] = useState(false)
+  const [womenToggleBtn, setWomenToggleBtn] = useState(false);
 
   const dropDownWomen = () => {
     // console.log("its open for women");
     setWomenToggleBtn(!womenToggleBtn);
   };
 
-  
   const dropDownMen = () => {
     // console.log("its open for men");
     setMenToggleBtn(!menToggleBtn);
@@ -44,6 +43,18 @@ const Navbar = () => {
           <Link to={"/home"}>Home</Link>
           <Link to={"/about"}>About</Link>
           <Link to={"/men"}>Women's Fashion</Link>
+          {/* working here ---------------------- */}
+          {/* <div className="!bg-red-500"> 
+            <p className="absolute top-4 ">Women's Fashion </p>
+            <FontAwesomeIcon
+              icon={faAngleDown}
+              className={`pr-4 md:pr-1 absolute top-5 right-0 md:right-12 ${
+                womenToggleBtn
+                  ? "rotate-[180deg] mr-4 md:mr-1"
+                  : "rotate-[0deg]"
+              } `}
+            />
+          </div> */}
           <Link to={"/men"}>Men's Fashion</Link>
           <Link to={"/contact"}>Contact</Link>
           <Link to={"/login"}>LogIn</Link>
@@ -88,7 +99,7 @@ const Navbar = () => {
 
           <div
             className={` ${
-              womenToggleBtn 
+              womenToggleBtn
                 ? "absolute top-15 md:top-13 left-10 md:left-15 h-15 w-[80%] text-lg font-light flex flex-col gap-1"
                 : "hidden"
             }`}
@@ -121,7 +132,7 @@ const Navbar = () => {
             }`}
           >
             <Link to={"/festive-wear"}>Festive Wear</Link>
-            <Link to={"/lost"}>Men's Wear</Link>
+            <Link to={"/mens-wear"}>Men's Wear</Link>
           </div>
         </div>
 
