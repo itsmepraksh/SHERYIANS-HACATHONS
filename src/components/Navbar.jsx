@@ -27,7 +27,7 @@ const Navbar = () => {
     setWomenToggleBtn(false);
   };
   return (
-    <div className=" p-4  bg-[#334238]   flex justify-between items-center  font-medium font-[latoRegular]  rounded-lg ">
+    <div className=" p-4 md:p-5 xl:p-10  bg-[#334238]   flex justify-between items-center  font-medium font-[latoRegular]  rounded-lg ">
       <div
         id="nav"
         className="flex justify-between w-full  items-center gap-4 md:px-4"
@@ -39,7 +39,7 @@ const Navbar = () => {
           </h1>
         </div>
 
-        <div id="nav-for-big-screen" className="hidden lg:flex text-sm gap-5">
+        <div id="nav-for-big-screen" className="hidden lg:flex lg:justify-around text-sm gap-5 xl:w-[47%]">
           <Link to={"/home"}>Home</Link>
           <Link to={"/about"}>About</Link>
           <Link to={"/men"}>Women's Fashion</Link>
@@ -70,6 +70,8 @@ const Navbar = () => {
         </div>
       </div>
 
+
+        {/* ------------this is for mobile view and sm screen */}
       <div
         id="hamburg-menu"
         className={` ${

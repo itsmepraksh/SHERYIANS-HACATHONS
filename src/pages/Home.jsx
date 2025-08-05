@@ -12,21 +12,20 @@ import { motion } from "motion/react";
 const Home = () => {
   return (
     <div className="">
-      <section
-        id="section-1"
-        className="bg-[#334238] px-4 py-8 md:px-8 md:grid md:[grid-template-areas:'a_d''b_d''c_d'] md:grid-cols-2 md:items-start md:justify-between"
+      <section id="section-1"
+        className="bg-[#334238] px-4 py-8 md:px-8 xl:px-15 md:grid md:[grid-template-areas:'a_d''b_d''c_d'] md:grid-cols-2 md:items-start md:justify-between"
       >
         <h2
           id="heading"
-          className="font-[latoBold] text-5xl lg:text-7xl font-bold uppercase leading-[1.1] tracking-wider md:[grid-area:a]"
+          className="font-[latoBold] text-5xl lg:text-7xl xl:text-[6.5rem] font-bold uppercase leading-[1.1] tracking-wider md:[grid-area:a]"
         >
-          Heritage <br /> Reimagined
+          Cultural <br /> Remix
         </h2>
 
-        <div id="coupons" className="font-[latoRegular] py-4 md:[grid-area:b]">
-          <p className="pb-3 text-lg">Culture, styled for today.</p>
-          <p className="">Save more with discount coupon.</p>
-          <p>use coupon SNOFF10 & get 10% off all our products.</p>
+        <div id="coupons" className="font-[latoRegular] py-4 xl:py-10 md:[grid-area:b] ">
+          <p className="pb-3 xl:pb-7 text-lg xl:text-2xl">Culture, styled for today.</p>
+          <p className="xl:text-base">Save more with discount coupon.</p>
+          <p className="xl:text-lg">use coupon SNOFF10 & get 10% off all our products.</p>
         </div>
         <div
           id="image-names"
@@ -41,26 +40,26 @@ const Home = () => {
         <div id="image-container" className=" md:[grid-area:d] md:relative  ">
           <div
             id="images-box"
-            className="flex relative h-[28rem] md:h-[24rem] lg:h-[30rem]    py-4 md:py-0"
+            className="flex relative h-[28rem] md:h-[24rem] lg:h-[30rem] xl:h-[35rem]   py-4 md:py-0"
           >
             <img
               src={item1}
-              className="h-96 lg:h-full w-[65%] md:w-[55%] lg:w-[60%] absolute md:right-0 object-cover object-center rounded-lg"
+              className="h-96 lg:h-full w-[65%] md:w-[55%] lg:w-[60%] xl:w-[50%] absolute md:right-0 object-cover object-center rounded-lg"
               alt=""
             />
             <img
               src={item2}
-              className="h-96 lg:h-full w-[65%] md:w-[55%] lg:w-[60%] absolute md:right-0 left-10 object-cover object-center rounded-lg"
+              className="h-96 lg:h-full w-[65%] md:w-[55%] lg:w-[60%] xl:w-[50%] absolute md:right-0 left-10 object-cover object-center rounded-lg"
               alt=""
             />
             <img
               src={item3}
-              className="h-96 lg:h-full w-[65%] md:w-[55%] lg:w-[60%] absolute md:right-0 left-20 object-cover object-center rounded-lg"
+              className="h-96 lg:h-full w-[65%] md:w-[55%] lg:w-[60%] xl:w-[50%] absolute md:right-0 left-20 xl:left-30 object-cover object-center rounded-lg"
               alt=""
             />
             <img
               src={item4}
-              className="h-96 lg:h-full w-[65%] md:w-[55%] lg:w-[60%] absolute md:right-0 left-30 object-cover object-center rounded-lg"
+              className="h-96 lg:h-full w-[65%] md:w-[55%] lg:w-[60%] xl:w-[50%] absolute md:right-0 left-30 xl:left-50 object-cover object-center rounded-lg"
               alt=""
             />
           </div>
@@ -75,9 +74,8 @@ const Home = () => {
           </div>
         </div>
       </section>
-      <section
-        id="section-2"
-        className="bg-[#FAF2E8] text-black px-4 py-8 pt-22 md:px-8"
+      <section id="section-2"
+        className="bg-[#FAF2E8] text-black px-4 py-8 pt-22 md:px-8 xl:px-15"
       >
         <p className="uppercase text-xs font-bold pb-2 text-center">
           New Arrivals
