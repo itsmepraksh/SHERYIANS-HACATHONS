@@ -19,13 +19,19 @@ const Navbar = () => {
     setMenToggleBtn(!menToggleBtn);
   };
 
-  // console.log(toggleBtn);
+
+  const [hoverMenu, setHoverMenu] = useState({  
+    women:false,
+    men:false
+  });
+  
 
   const toggleHamburgMenu = () => {
     setIsMenuOpen(!isMenuOpen);
     setMenToggleBtn(false);
     setWomenToggleBtn(false);
   };
+
   return (
     <div className=" p-4 md:p-5 xl:p-10  bg-[#334238]   flex justify-between items-center  font-medium font-[latoRegular]  rounded-lg ">
       <div
@@ -39,26 +45,58 @@ const Navbar = () => {
           </h1>
         </div>
 
-        <div id="nav-for-big-screen" className="hidden lg:flex lg:justify-around text-sm gap-5 xl:w-[47%]">
-          <Link to={"/home"}>Home</Link>
-          <Link to={"/about"}>About</Link>
-          <Link to={"/men"}>Women's Fashion</Link>
+        <div
+          id="nav-for-big-screen"
+          className="hidden lg:flex lg:justify-around text-sm gap-5 xl:w-[47%]"
+        >
+          <Link className="hover:underline" to={"/home"}>
+            Home
+          </Link>
+          <Link className="hover:underline" to={"/about"}>
+            About
+          </Link>
+
           {/* working here ---------------------- */}
-          {/* <div className="!bg-red-500"> 
-            <p className="absolute top-4 ">Women's Fashion </p>
-            <FontAwesomeIcon
-              icon={faAngleDown}
-              className={`pr-4 md:pr-1 absolute top-5 right-0 md:right-12 ${
-                womenToggleBtn
-                  ? "rotate-[180deg] mr-4 md:mr-1"
-                  : "rotate-[0deg]"
-              } `}
-            />
-          </div> */}
-          <Link to={"/men"}>Men's Fashion</Link>
-          <Link to={"/contact"}>Contact</Link>
-          <Link to={"/login"}>LogIn</Link>
-          <Link to={"/signup"}>SignUp</Link>
+
+          <div
+            id="women-hover-menu"
+            onMouseEnter={()=>setHoverMenu(prev=>({...prev,women:true}))}
+            onMouseLeave={()=>setHoverMenu(prev=>({...prev,women:false}))}
+
+
+            className="inline-block"
+          >
+            <Link
+              className={` ${hoverMenu.women ? "hover:underline" : ""}`}
+              to={"/men"}
+            >
+              Women's Fashion
+            </Link>
+          </div>
+
+          {/* working here ---------------------- */}
+          <div
+            onMouseEnter={()=>setHoverMenu(prev=>({...prev,men:true}))}
+
+            onMouseLeave={()=>setHoverMenu(prev=>({...prev,men:false}))}
+            className="inline-block "
+          >
+            <Link
+              className={`${hoverMenu.men ? " hover:underline" : ""}`}
+              to={"/men"}
+            >
+              Men's Fashion
+            </Link>
+          </div>
+          <Link className="hover:underline" to={"/contact"}>
+            Contact
+          </Link>
+          <Link className="hover:underline" to={"/login"}>
+            LogIn
+          </Link>
+          <Link className="hover:underline" to={"/signup"}>
+            SignUp
+          </Link>
         </div>
 
         <div
@@ -70,8 +108,18 @@ const Navbar = () => {
         </div>
       </div>
 
+      <div
+        className={`${
+          hoverMenu.women ? "block" : "hidden"
+        } absolute top-20 right-50 z-[9] h-40 w-96 bg-red-500`}
+      ></div>
+      <div
+        className={`${
+          hoverMenu.men ? "block" : "hidden"
+        } absolute top-20 right-30 z-[9] h-40 w-96 bg-green-500`}
+      ></div>
 
-        {/* ------------this is for mobile view and sm screen */}
+      {/* ------------this is for mobile view and sm screen */}
       <div
         id="hamburg-menu"
         className={` ${

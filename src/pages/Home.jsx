@@ -17,7 +17,7 @@ const Home = () => {
       >
         <h2
           id="heading"
-          className="font-[latoBold] text-5xl lg:text-7xl xl:text-[6.5rem] font-bold uppercase leading-[1.1] tracking-wider md:[grid-area:a]"
+          className="font-[latoBold] text-5xl lg:text-7xl xl:text-[6.5rem]  font-bold uppercase leading-[1.1] tracking-wider md:[grid-area:a]"
         >
           Cultural <br /> Remix
         </h2>

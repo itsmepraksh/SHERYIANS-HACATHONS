@@ -19,12 +19,12 @@ const Footer = () => {
           <img src={logo} className="h-20 rounded-full absolute" alt="" />
         </div>
 
-        <p className="text-lg  md:px-8 xl:px-15 xl:py-7">
+        <p className="text-lg px-4 md:px-8 xl:px-15 xl:py-7">
           We craft stunning ethnic and fusion wear designed to win hearts, made
           with care, made to last, and made for your most beautiful moments.
         </p>
       </div>
-      <div id="footer-info" className=" md:px-8 xl:px-15">
+      <div id="footer-info" className="px-4 md:px-8 xl:px-15">
         <div id="footer-links" className="flex flex-wrap items-center xl:items-start   ">
           <div id="links" className="w-1/2 xl:w-1/3 pt-10">
             <h1 className="font-bold py-3 uppercase text-sm text-[#CCE561]">
